@@ -1,0 +1,13 @@
+C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.ServiceDefaults\bin\Debug\net9.0\PowerSharp.Aspire.ServiceDefaults.deps.json
+C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.ServiceDefaults\bin\Debug\net9.0\PowerSharp.Aspire.ServiceDefaults.dll
+C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.ServiceDefaults\bin\Debug\net9.0\PowerSharp.Aspire.ServiceDefaults.pdb
+C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.ServiceDefaults\obj\Debug\net9.0\PowerSharp.Aspire.ServiceDefaults.csproj.AssemblyReference.cache
+C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.ServiceDefaults\obj\Debug\net9.0\PowerSharp.Aspire.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.ServiceDefaults\obj\Debug\net9.0\PowerSharp.Aspire.ServiceDefaults.AssemblyInfoInputs.cache
+C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.ServiceDefaults\obj\Debug\net9.0\PowerSharp.Aspire.ServiceDefaults.AssemblyInfo.cs
+C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.ServiceDefaults\obj\Debug\net9.0\PowerSharp.Aspire.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.ServiceDefaults\obj\Debug\net9.0\PowerSharp.Aspire.ServiceDefaults.sourcelink.json
+C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.ServiceDefaults\obj\Debug\net9.0\PowerSharp.Aspire.ServiceDefaults.dll
+C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.ServiceDefaults\obj\Debug\net9.0\refint\PowerSharp.Aspire.ServiceDefaults.dll
+C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.ServiceDefaults\obj\Debug\net9.0\PowerSharp.Aspire.ServiceDefaults.pdb
+C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.ServiceDefaults\obj\Debug\net9.0\ref\PowerSharp.Aspire.ServiceDefaults.dll
