@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PowerSharp.Aspire.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94fa45327236766915d7b803cd33146bd077cb92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbcf865bc6053f12f1aec38b4d71b399b84daad5")]
 [assembly: System.Reflection.AssemblyProductAttribute("PowerSharp.Aspire.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PowerSharp.Aspire.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

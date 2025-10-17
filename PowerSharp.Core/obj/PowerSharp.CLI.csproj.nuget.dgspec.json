@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
               "C:\\_source\\repos\\PowerSharp\\PowerSharp.Core\\PowerSharp.Core.csproj": {
                 "projectPath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Core\\PowerSharp.Core.csproj"
@@ -52,16 +52,16 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Spectre.Console": {
               "target": "Package",
-              "version": "[0.48.0, )"
+              "version": "[0.52.1-preview.0.5, )"
             },
             "System.CommandLine": {
               "target": "Package",
-              "version": "[2.0.0-beta4.22272.1, )"
+              "version": "[2.0.0-rc.2.25502.107, )"
             }
           },
           "imports": [
@@ -102,7 +102,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -110,8 +110,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -128,8 +128,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "AdaptiveCards": {
               "target": "Package",
@@ -137,11 +137,15 @@
             },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
-              "version": "[9.0.10, )"
+              "version": "[10.0.0-rc.2.25502.107, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[10.0.0-rc.2.25502.107, )"
             },
             "Microsoft.Extensions.Options": {
               "target": "Package",
-              "version": "[9.0.10, )"
+              "version": "[10.0.0-rc.2.25502.107, )"
             },
             "OpenTelemetry": {
               "target": "Package",
@@ -154,6 +158,10 @@
             "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
               "target": "Package",
               "version": "[1.13.1, )"
+            },
+            "System.CommandLine": {
+              "target": "Package",
+              "version": "[2.0.0-rc.2.25502.107, )"
             }
           },
           "imports": [

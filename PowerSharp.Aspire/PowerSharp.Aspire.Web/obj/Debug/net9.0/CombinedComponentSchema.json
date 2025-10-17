@@ -178,6 +178,11 @@
                   "type": "string",
                   "description": "Gets or sets the comma-delimited configuration string used to connect to the Redis server."
                 },
+                "DisableAutoActivation": {
+                  "type": "boolean",
+                  "description": "Gets or sets a boolean value that indicates whether auto activation is disabled or not.",
+                  "default": true
+                },
                 "DisableHealthChecks": {
                   "type": "boolean",
                   "description": "Gets or sets a boolean value that indicates whether the Redis health check is disabled or not.",
@@ -197,5 +202,5 @@
     }
   },
   "type": "object",
-  "SourceSegments": "C:\\Users\\JordanHughes\\.nuget\\packages\\aspire.stackexchange.redis\\9.3.1\\ConfigurationSchema.json;C:\\Users\\JordanHughes\\.nuget\\packages\\aspire.stackexchange.redis.outputcaching\\9.3.1\\ConfigurationSchema.json"
+  "SourceSegments": "C:\\Users\\JordanHughes\\.nuget\\packages\\aspire.stackexchange.redis\\9.5.1\\ConfigurationSchema.json;C:\\Users\\JordanHughes\\.nuget\\packages\\aspire.stackexchange.redis.outputcaching\\9.5.1\\ConfigurationSchema.json"
 }

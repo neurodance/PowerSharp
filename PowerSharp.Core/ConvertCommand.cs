@@ -1,4 +1,6 @@
+using System;
 using System.CommandLine;
+using System.IO;
 using System.Text;
 
 namespace PowerSharp.CLI.Commands
@@ -14,37 +16,42 @@ namespace PowerSharp.CLI.Commands
             var command = new Command("convert",
                 "Convert between bash and PowerShell scripts");
 
-            var inputArg = new Argument<FileInfo>(
-                "input",
-                "Input script file (.sh or .ps1)");
-
-            var toOption = new Option<string>(
-                "--to",
-                "Target format (bash or pwsh)")
+            var inputArg = new Argument<FileInfo>("input")
             {
-                IsRequired = true
+                Description = "Input script file (.sh or .ps1)"
             };
-            toOption.AddValidator(result =>
-            {
-                var value = result.GetValueOrDefault<string>();
-                if (value != "bash" && value != "pwsh")
+
+            var toOption = new Option<string>("--to")
                 {
-                    result.ErrorMessage = "Target format must be 'bash' or 'pwsh'";
-                }
-            });
+                Description = "Target format (bash or pwsh)"
+            };
 
-            var outputOption = new Option<FileInfo?>(
-                "--output",
-                "Output file (defaults to input with new extension)");
-
-            command.AddArgument(inputArg);
-            command.AddOption(toOption);
-            command.AddOption(outputOption);
-
-            command.SetHandler(async (input, to, output) =>
+            var outputOption = new Option<FileInfo?>("--output")
             {
-                await ConvertScriptAsync(input, to, output);
-            }, inputArg, toOption, outputOption);
+                Description = "Output file (defaults to input with new extension)"
+            };
+
+            command.Add(inputArg);
+            command.Add(toOption);
+            command.Add(outputOption);
+
+            command.SetAction(async (parseResult, cancellationToken) =>
+            {
+                var input = parseResult.GetValue(inputArg);
+                var to = parseResult.GetValue(toOption);
+                var output = parseResult.GetValue(outputOption);
+
+                if (string.IsNullOrWhiteSpace(to) ||
+                    (!string.Equals(to, "bash", StringComparison.OrdinalIgnoreCase) &&
+                     !string.Equals(to, "pwsh", StringComparison.OrdinalIgnoreCase)))
+                {
+                    Console.Error.WriteLine("Target format must be 'bash' or 'pwsh'");
+                    return 1;
+                }
+
+                await ConvertScriptAsync(input!, to.ToLowerInvariant(), output);
+                return 0;
+            });
 
             return command;
         }
@@ -91,19 +98,44 @@ namespace PowerSharp.CLI.Commands
                 ? ConvertBashToPowerShell(inputContent)
                 : ConvertPowerShellToBash(inputContent);
 
-            // Write output
+            // Ensure output directory
+            if (!string.IsNullOrEmpty(output!.DirectoryName))
+                Directory.CreateDirectory(output.DirectoryName);
+
+            // Write
             await File.WriteAllTextAsync(output.FullName, convertedContent);
+
+            // Mark executable on Unix
+            if (!OperatingSystem.IsWindows() && string.Equals(targetFormat, "bash", StringComparison.OrdinalIgnoreCase))
+            {
+                try
+                {
+                    File.SetUnixFileMode(output.FullName,
+                        UnixFileMode.UserRead | UnixFileMode.UserWrite | UnixFileMode.UserExecute |
+                        UnixFileMode.GroupRead | UnixFileMode.GroupExecute |
+                        UnixFileMode.OtherRead | UnixFileMode.OtherExecute);
+                }
+                catch
+                {
+                    // best-effort; ignore
+                }
+            }
 
             Console.WriteLine($"Converted successfully: {output.FullName}");
         }
 
         private static string DetectFormat(string content)
         {
-            // Simple heuristic detection
-            if (content.Contains("$env:") || content.Contains("param("))
-                return "pwsh";
-            if (content.Contains("#!/bin/bash") || content.Contains("export "))
+            if (content.Contains("#!/usr/bin/env bash", StringComparison.Ordinal) ||
+                content.Contains("#!/bin/bash", StringComparison.Ordinal) ||
+                content.Contains("export ", StringComparison.Ordinal))
                 return "bash";
+
+            if (content.Contains("#!/usr/bin/env pwsh", StringComparison.Ordinal) ||
+                content.Contains("#!/usr/bin/pwsh", StringComparison.Ordinal) ||
+                content.Contains("$env:", StringComparison.Ordinal) ||
+                content.Contains("param(", StringComparison.Ordinal))
+                return "pwsh";
 
             return "unknown";
         }
@@ -143,16 +175,36 @@ namespace PowerSharp.CLI.Commands
                     }
                 }
 
-                // Convert variable references
-                var converted = line
-                    .Replace("$PATH", "$env:PATH")
-                    .Replace("$HOME", "$env:USERPROFILE");
-
-                // Convert echo to Write-Host
-                if (trimmed.StartsWith("echo "))
+                // Convert echo
+                if (trimmed.StartsWith("echo ", StringComparison.Ordinal))
                 {
-                    var message = trimmed.Substring(5).Trim();
-                    pwsh.AppendLine($"Write-Host {message}");
+                    var message = trimmed[5..].Trim();
+                    pwsh.AppendLine($"Write-Host {QuotePwsh(message)}");
+                    continue;
+                }
+
+                // Common command mappings
+                var simple = trimmed
+                    .Replace("pwd", "Get-Location", StringComparison.Ordinal)
+                    .Replace("ls", "Get-ChildItem", StringComparison.Ordinal)
+                    .Replace("cat ", "Get-Content ", StringComparison.Ordinal)
+                    .Replace("mkdir -p", "New-Item -ItemType Directory -Force", StringComparison.Ordinal)
+                    .Replace("rm -rf", "Remove-Item -Recurse -Force", StringComparison.Ordinal);
+
+                if (!simple.Equals(trimmed, StringComparison.Ordinal))
+                {
+                    pwsh.AppendLine(simple);
+                    continue;
+                }
+
+                // Simple env var replacements
+                var converted = line
+                    .Replace("$PATH", "$env:PATH", StringComparison.Ordinal)
+                    .Replace("$HOME", "$HOME", StringComparison.Ordinal);
+
+                if (!string.Equals(converted, line, StringComparison.Ordinal))
+                {
+                    pwsh.AppendLine(converted);
                     continue;
                 }
 
@@ -211,10 +263,31 @@ namespace PowerSharp.CLI.Commands
                     .Replace("$env:", "$");
 
                 // Convert Write-Host to echo
-                if (trimmed.StartsWith("Write-Host "))
+                if (trimmed.StartsWith("Write-Host ", StringComparison.Ordinal))
                 {
-                    var message = trimmed.Substring(11).Trim();
-                    bash.AppendLine($"echo {message}");
+                    var message = trimmed[11..].Trim();
+                    bash.AppendLine($"echo {QuoteBash(message)}");
+                    continue;
+                }
+
+                // Simple command maps
+                var simple = trimmed
+                    .Replace("Get-Location", "pwd", StringComparison.Ordinal)
+                    .Replace("Get-ChildItem", "ls", StringComparison.Ordinal)
+                    .Replace("Get-Content ", "cat ", StringComparison.Ordinal)
+                    .Replace("New-Item -ItemType Directory -Force", "mkdir -p", StringComparison.Ordinal)
+                    .Replace("Remove-Item -Recurse -Force", "rm -rf", StringComparison.Ordinal);
+
+                if (!simple.Equals(trimmed, StringComparison.Ordinal))
+                {
+                    bash.AppendLine(simple);
+                    continue;
+                }
+
+                // If simple variable replacements changed the line, use it
+                if (!string.Equals(converted, line, StringComparison.Ordinal))
+                {
+                    bash.AppendLine(converted);
                     continue;
                 }
 
@@ -231,6 +304,18 @@ namespace PowerSharp.CLI.Commands
             }
 
             return bash.ToString();
+        }
+
+        private static string QuotePwsh(string message)
+        {
+            // Escape PowerShell backticks and double quotes
+            return $"\"{message.Replace("`", "``").Replace("\"", "`\"")}\"";
+        }
+
+        private static string QuoteBash(string message)
+        {
+            // Escape bash double quotes with backslash
+            return $"\"{message.Replace("\\", "\\\\").Replace("\"", "\\\"")}\"";
         }
     }
 }

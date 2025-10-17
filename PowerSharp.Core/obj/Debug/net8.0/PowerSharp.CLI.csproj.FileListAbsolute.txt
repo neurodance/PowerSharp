@@ -1,0 +1,6 @@
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net8.0\PowerSharp.CLI.csproj.AssemblyReference.cache
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net8.0\PowerSharp.CLI.GeneratedMSBuildEditorConfig.editorconfig
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net8.0\PowerSharp.CLI.AssemblyInfoInputs.cache
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net8.0\PowerSharp.CLI.AssemblyInfo.cs
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net8.0\PowerSharp.CLI.csproj.CoreCompileInputs.cache
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net8.0\PowerSharp.CLI.sourcelink.json

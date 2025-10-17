@@ -1,0 +1,13 @@
+C:\_source\repos\PowerSharp\PowerSharp.Core\bin\Debug\net9.0\PowerSharp.Core.deps.json
+C:\_source\repos\PowerSharp\PowerSharp.Core\bin\Debug\net9.0\PowerSharp.Core.dll
+C:\_source\repos\PowerSharp\PowerSharp.Core\bin\Debug\net9.0\PowerSharp.Core.pdb
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\PowerSharp.Core.csproj.AssemblyReference.cache
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\PowerSharp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\PowerSharp.Core.AssemblyInfoInputs.cache
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\PowerSharp.Core.AssemblyInfo.cs
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\PowerSharp.Core.csproj.CoreCompileInputs.cache
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\PowerSharp.Core.sourcelink.json
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\PowerSharp.Core.dll
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\refint\PowerSharp.Core.dll
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\PowerSharp.Core.pdb
+C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\ref\PowerSharp.Core.dll
