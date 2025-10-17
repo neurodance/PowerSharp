@@ -6,11 +6,12 @@ public class WebTests
 {
     private static readonly TimeSpan DefaultTimeout = TimeSpan.FromSeconds(30);
 
-    [Test]
+    [Fact]
     public async Task GetWebResourceRootReturnsOkStatusCode()
     {
         // Arrange
-        var cancellationToken = TestContext.CurrentContext.CancellationToken;
+        var cancellationTokenSource = new CancellationTokenSource(DefaultTimeout);
+        var cancellationToken = cancellationTokenSource.Token;
 
         var appHost = await DistributedApplicationTestingBuilder.CreateAsync<Projects.PowerSharp_Aspire_AppHost>(cancellationToken);
         appHost.Services.AddLogging(logging =>
@@ -34,6 +35,6 @@ public class WebTests
         var response = await httpClient.GetAsync("/", cancellationToken);
 
         // Assert
-        Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
 }
