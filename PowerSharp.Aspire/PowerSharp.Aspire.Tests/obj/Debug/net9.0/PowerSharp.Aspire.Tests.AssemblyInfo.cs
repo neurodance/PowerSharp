@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PowerSharp.Aspire.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ca0ae226de8fecd083ae4d21c4d8789984798bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94fa45327236766915d7b803cd33146bd077cb92")]
 [assembly: System.Reflection.AssemblyProductAttribute("PowerSharp.Aspire.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PowerSharp.Aspire.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

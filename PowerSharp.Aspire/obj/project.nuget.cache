@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "hrrG/PDhc9k=",
+  "success": true,
+  "projectFilePath": "C:\\_source\\Session 9 files\\PowerSharp.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\adaptivecards\\3.1.0\\adaptivecards.3.1.0.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.0\\microsoft.extensions.configuration.9.0.0.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.0\\microsoft.extensions.configuration.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.configuration.binder\\9.0.0\\microsoft.extensions.configuration.binder.9.0.0.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0\\microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.10\\microsoft.extensions.dependencyinjection.abstractions.9.0.10.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\9.0.0\\microsoft.extensions.diagnostics.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.logging\\9.0.0\\microsoft.extensions.logging.9.0.0.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.10\\microsoft.extensions.logging.abstractions.9.0.10.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.logging.configuration\\9.0.0\\microsoft.extensions.logging.configuration.9.0.0.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.options\\9.0.10\\microsoft.extensions.options.9.0.10.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\9.0.0\\microsoft.extensions.options.configurationextensions.9.0.0.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.10\\microsoft.extensions.primitives.9.0.10.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\opentelemetry\\1.13.1\\opentelemetry.1.13.1.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\opentelemetry.api\\1.13.1\\opentelemetry.api.1.13.1.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\opentelemetry.api.providerbuilderextensions\\1.13.1\\opentelemetry.api.providerbuilderextensions.1.13.1.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\opentelemetry.exporter.opentelemetryprotocol\\1.13.1\\opentelemetry.exporter.opentelemetryprotocol.1.13.1.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.10\\system.diagnostics.diagnosticsource.9.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

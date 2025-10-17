@@ -7,5 +7,5 @@ namespace Projects;
 [global::System.Diagnostics.DebuggerDisplay("Type = {GetType().Name,nq}, ProjectPath = {ProjectPath}")]
 public class PowerSharp_Aspire_Web : global::Aspire.Hosting.IProjectMetadata
 {
-    public string ProjectPath => """C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.Web\PowerSharp.Aspire.Web.csproj""";
+    public string ProjectPath => """C:\_source\repos\PowerSharp\PowerSharp.Aspire\PowerSharp.Aspire.Web\PowerSharp.Aspire.Web.csproj""";
 }

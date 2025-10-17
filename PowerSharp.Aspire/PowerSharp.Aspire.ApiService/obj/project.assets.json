@@ -2115,11 +2115,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\_source\\repos\\powersharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ApiService\\PowerSharp.Aspire.ApiService.csproj",
+      "projectUniqueName": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ApiService\\PowerSharp.Aspire.ApiService.csproj",
       "projectName": "PowerSharp.Aspire.ApiService",
-      "projectPath": "C:\\_source\\repos\\powersharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ApiService\\PowerSharp.Aspire.ApiService.csproj",
+      "projectPath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ApiService\\PowerSharp.Aspire.ApiService.csproj",
       "packagesPath": "C:\\Users\\JordanHughes\\.nuget\\packages\\",
-      "outputPath": "C:\\_source\\repos\\powersharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ApiService\\obj\\",
+      "outputPath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ApiService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2141,8 +2141,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\_source\\repos\\powersharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\PowerSharp.Aspire.ServiceDefaults.csproj": {
-              "projectPath": "C:\\_source\\repos\\powersharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\PowerSharp.Aspire.ServiceDefaults.csproj"
+            "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\PowerSharp.Aspire.ServiceDefaults.csproj": {
+              "projectPath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\PowerSharp.Aspire.ServiceDefaults.csproj"
             }
           }
         }

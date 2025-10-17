@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fST2ucYVg3A=",
+  "dgSpecHash": "vRArabdqD6M=",
   "success": true,
-  "projectFilePath": "C:\\_source\\repos\\powersharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\PowerSharp.Aspire.ServiceDefaults.csproj",
+  "projectFilePath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\PowerSharp.Aspire.ServiceDefaults.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.ambientmetadata.application\\9.4.0\\microsoft.extensions.ambientmetadata.application.9.4.0.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.compliance.abstractions\\9.4.0\\microsoft.extensions.compliance.abstractions.9.4.0.nupkg.sha512",

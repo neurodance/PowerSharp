@@ -8,5 +8,5 @@ namespace Projects;
 public class PowerSharp_Aspire_AppHost
 {
     private PowerSharp_Aspire_AppHost() { }
-    public static string ProjectPath => """C:\_source\repos\powersharp\PowerSharp.Aspire\PowerSharp.Aspire.AppHost""";
+    public static string ProjectPath => """C:\_source\repos\PowerSharp\PowerSharp.Aspire\PowerSharp.Aspire.AppHost""";
 }

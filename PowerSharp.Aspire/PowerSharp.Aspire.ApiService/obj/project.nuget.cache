@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/96jNqRlX9A=",
+  "dgSpecHash": "Py+qZSR11sc=",
   "success": true,
-  "projectFilePath": "C:\\_source\\repos\\powersharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ApiService\\PowerSharp.Aspire.ApiService.csproj",
+  "projectFilePath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ApiService\\PowerSharp.Aspire.ApiService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.ambientmetadata.application\\9.4.0\\microsoft.extensions.ambientmetadata.application.9.4.0.nupkg.sha512",

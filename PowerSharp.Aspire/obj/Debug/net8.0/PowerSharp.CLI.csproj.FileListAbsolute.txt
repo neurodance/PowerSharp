@@ -1,0 +1,5 @@
+C:\_source\Session 9 files\obj\Debug\net8.0\PowerSharp.CLI.csproj.AssemblyReference.cache
+C:\_source\Session 9 files\obj\Debug\net8.0\PowerSharp.CLI.GeneratedMSBuildEditorConfig.editorconfig
+C:\_source\Session 9 files\obj\Debug\net8.0\PowerSharp.CLI.AssemblyInfoInputs.cache
+C:\_source\Session 9 files\obj\Debug\net8.0\PowerSharp.CLI.AssemblyInfo.cs
+C:\_source\Session 9 files\obj\Debug\net8.0\PowerSharp.CLI.csproj.CoreCompileInputs.cache

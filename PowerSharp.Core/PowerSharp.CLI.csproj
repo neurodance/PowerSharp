@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    
+    <!-- Package as global tool -->
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>powersharp</ToolCommandName>
+    
+    <!-- NuGet Package Metadata -->
+    <PackageId>PowerSharp.CLI</PackageId>
+    <Version>1.0.0-preview.1</Version>
+    <Authors>neurodance</Authors>
+    <Company>PowerSharp</Company>
+    <Product>PowerSharp</Product>
+    <Description>Command-line tools for PowerSharp. Includes bash↔PowerShell conversion, PATH management, environment variable helpers, and more.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://powersharp.ai</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/neurodance/powersharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>cli;bash;powershell;cross-platform;tools</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- System.CommandLine for CLI -->
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+    
+    <!-- Spectre.Console for better CLI UX -->
+    <PackageReference Include="Spectre.Console" Version="0.48.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Reference to PowerSharp.Core -->
+    <ProjectReference Include="..\PowerSharp.Core\PowerSharp.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

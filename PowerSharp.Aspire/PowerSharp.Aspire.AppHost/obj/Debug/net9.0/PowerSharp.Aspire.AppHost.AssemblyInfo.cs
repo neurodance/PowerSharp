@@ -18,15 +18,15 @@ using System.Reflection;
     "tools\\ext\\")]
 [assembly: System.Reflection.AssemblyMetadata("dcpbinpath", "C:\\Users\\JordanHughes\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\9.3.1\\" +
     "tools\\ext\\bin\\")]
-[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "C:\\_source\\repos\\powersharp\\PowerSharp.Aspire\\PowerSharp.Aspire.AppHost")]
+[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.AppHost")]
 [assembly: System.Reflection.AssemblyMetadata("apphostprojectname", "PowerSharp.Aspire.AppHost.csproj")]
 [assembly: System.Reflection.AssemblyMetadata("aspiredashboardpath", "C:\\Users\\JordanHughes\\.nuget\\packages\\aspire.dashboard.sdk.win-x64\\9.3.1\\tools\\As" +
     "pire.Dashboard.exe")]
-[assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "C:\\_source\\repos\\powersharp\\PowerSharp.Aspire\\PowerSharp.Aspire.AppHost\\obj\\")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.AppHost\\obj\\")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PowerSharp.Aspire.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ca0ae226de8fecd083ae4d21c4d8789984798bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94fa45327236766915d7b803cd33146bd077cb92")]
 [assembly: System.Reflection.AssemblyProductAttribute("PowerSharp.Aspire.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PowerSharp.Aspire.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
