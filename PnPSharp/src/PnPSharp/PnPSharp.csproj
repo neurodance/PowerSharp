@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\Directory.PnPSharp.props" />
+  <PropertyGroup>
+    <AssemblyName>PnPSharp</AssemblyName>
+    <RootNamespace>PnPSharp</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>Unified .NET 9 library to access PnP SDKs and optionally host PowerShell 7.x to invoke cmdlets programmatically.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.5.0" />
+    <PackageReference Include="PnP.Core" Version="1.12.0" />
+    <PackageReference Include="PnP.Core.Auth" Version="1.12.0" />
+    <PackageReference Include="PnP.Framework" Version="1.14.0" />
+    <PackageReference Include="Microsoft.Graph" Version="5.52.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
+  </ItemGroup>
+</Project>
