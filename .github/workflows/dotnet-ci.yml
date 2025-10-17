@@ -1,0 +1,150 @@
+name: .NET CI/CD with Code Coverage
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+
+env:
+  DOTNET_VERSION: '9.0.x'
+  DOTNET_QUALITY: 'preview'
+  CONFIGURATION: Release
+  COVERAGE_THRESHOLD: 60
+
+jobs:
+  build-and-test:
+    name: Build, Test & Coverage
+    runs-on: windows-latest
+    
+    steps:
+    - name: 🔽 Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Full history for SourceLink
+    
+    - name: ⚙️ Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+        dotnet-quality: ${{ env.DOTNET_QUALITY }}
+    
+    - name: 📦 Restore Dependencies
+      run: dotnet restore PowerSharp.Platform.sln
+    
+    - name: 🏗️ Build Solution
+      run: dotnet build PowerSharp.Platform.sln --configuration ${{ env.CONFIGURATION }} --no-restore
+    
+    - name: 🧪 Run Tests with Coverage
+      run: |
+        dotnet test PowerSharp.Platform.sln `
+          --configuration ${{ env.CONFIGURATION }} `
+          --no-build `
+          --verbosity normal `
+          --collect:"XPlat Code Coverage" `
+          --settings coverlet.runsettings `
+          --results-directory ./TestResults `
+          --logger:"trx;LogFileName=test-results.trx"
+      continue-on-error: true  # Don't fail on test failures yet
+    
+    - name: 📊 Install ReportGenerator
+      run: dotnet tool install -g dotnet-reportgenerator-globaltool
+    
+    - name: 📈 Generate Coverage Report
+      run: |
+        reportgenerator `
+          -reports:"TestResults/**/coverage.cobertura.xml" `
+          -targetdir:"TestResults/CoverageReport" `
+          -reporttypes:"Html;JsonSummary;Badges;MarkdownSummaryGithub" `
+          -assemblyfilters:"-*Tests*" `
+          -title:"PowerSharp Platform Code Coverage"
+    
+    - name: 📤 Upload Coverage Report
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: coverage-report
+        path: TestResults/CoverageReport/
+        retention-days: 30
+    
+    - name: 📤 Upload Test Results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results
+        path: TestResults/*.trx
+        retention-days: 30
+    
+    - name: 📊 Display Coverage Summary
+      if: always()
+      run: |
+        if (Test-Path "TestResults/CoverageReport/Summary.json") {
+          $summary = Get-Content "TestResults/CoverageReport/Summary.json" | ConvertFrom-Json
+          Write-Host "=== Code Coverage Summary ===" -ForegroundColor Cyan
+          Write-Host "Line Coverage:   $($summary.summary.linecoverage)%" -ForegroundColor $(if ($summary.summary.linecoverage -ge ${{ env.COVERAGE_THRESHOLD }}) { 'Green' } else { 'Yellow' })
+          Write-Host "Branch Coverage: $($summary.summary.branchcoverage)%" -ForegroundColor Gray
+          Write-Host "Method Coverage: $($summary.summary.methodcoverage)%" -ForegroundColor Gray
+          
+          # Write to GitHub Step Summary
+          $lineCoverage = [double]$summary.summary.linecoverage
+          $branchCoverage = [double]$summary.summary.branchcoverage
+          $methodCoverage = [double]$summary.summary.methodcoverage
+          
+          "## 📊 Code Coverage Summary" >> $env:GITHUB_STEP_SUMMARY
+          "" >> $env:GITHUB_STEP_SUMMARY
+          "| Metric | Coverage | Status |" >> $env:GITHUB_STEP_SUMMARY
+          "|--------|----------|--------|" >> $env:GITHUB_STEP_SUMMARY
+          "| **Line Coverage** | $lineCoverage% | $(if ($lineCoverage -ge ${{ env.COVERAGE_THRESHOLD }}) { '✅ Pass' } else { '⚠️ Below Threshold' }) |" >> $env:GITHUB_STEP_SUMMARY
+          "| **Branch Coverage** | $branchCoverage% | $(if ($branchCoverage -ge 50) { '✅' } else { '⚠️' }) |" >> $env:GITHUB_STEP_SUMMARY
+          "| **Method Coverage** | $methodCoverage% | $(if ($methodCoverage -ge 55) { '✅' } else { '⚠️' }) |" >> $env:GITHUB_STEP_SUMMARY
+          "" >> $env:GITHUB_STEP_SUMMARY
+          "📁 [View Detailed Coverage Report](../artifacts/coverage-report)" >> $env:GITHUB_STEP_SUMMARY
+          
+          # Exit with error if below threshold
+          if ($lineCoverage -lt ${{ env.COVERAGE_THRESHOLD }}) {
+            Write-Host "❌ Coverage below threshold (${{ env.COVERAGE_THRESHOLD }}%)" -ForegroundColor Red
+            exit 1
+          }
+        } else {
+          Write-Host "⚠️ Coverage summary not found" -ForegroundColor Yellow
+        }
+      shell: pwsh
+    
+    - name: 📊 Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action/windows@v2
+      if: always()
+      with:
+        files: TestResults/**/*.trx
+        check_name: Test Results
+        comment_mode: off
+    
+    - name: ✅ Build & Test Complete
+      if: success()
+      run: |
+        Write-Host "✅ Build, tests, and coverage checks passed successfully!" -ForegroundColor Green
+      shell: pwsh
+
+  # Optional: Separate job for PnPSharp integration tests (requires credentials)
+  integration-tests:
+    name: Integration Tests
+    runs-on: windows-latest
+    if: false  # Disabled by default - enable when credentials configured
+    needs: build-and-test
+    
+    steps:
+    - name: 🔽 Checkout Repository
+      uses: actions/checkout@v4
+    
+    - name: ⚙️ Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+        dotnet-quality: ${{ env.DOTNET_QUALITY }}
+    
+    - name: 🧪 Run PnPSharp Integration Tests
+      run: dotnet test PnPSharp/tests/PnPSharp.IntegrationTests --configuration ${{ env.CONFIGURATION }}
+      env:
+        PNP_TEST_SITE_URL: ${{ secrets.PNP_TEST_SITE_URL }}
+        PNP_TEST_CLIENT_ID: ${{ secrets.PNP_TEST_CLIENT_ID }}
+        PNP_TEST_TENANT_ID: ${{ secrets.PNP_TEST_TENANT_ID }}

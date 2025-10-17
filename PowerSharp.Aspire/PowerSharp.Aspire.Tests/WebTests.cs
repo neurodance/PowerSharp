@@ -37,4 +37,80 @@ public class WebTests
         // Assert
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
+
+    [Fact]
+    public async Task WebHealthEndpoint_ReturnsHealthy()
+    {
+        // Arrange
+        var cancellationTokenSource = new CancellationTokenSource(DefaultTimeout);
+        var cancellationToken = cancellationTokenSource.Token;
+
+        var appHost = await DistributedApplicationTestingBuilder.CreateAsync<Projects.PowerSharp_Aspire_AppHost>(cancellationToken);
+        appHost.Services.ConfigureHttpClientDefaults(clientBuilder =>
+        {
+            clientBuilder.AddStandardResilienceHandler();
+        });
+
+        await using var app = await appHost.BuildAsync(cancellationToken).WaitAsync(DefaultTimeout, cancellationToken);
+        await app.StartAsync(cancellationToken).WaitAsync(DefaultTimeout, cancellationToken);
+
+        // Act
+        var httpClient = app.CreateHttpClient("webfrontend");
+        await app.ResourceNotifications.WaitForResourceHealthyAsync("webfrontend", cancellationToken).WaitAsync(DefaultTimeout, cancellationToken);
+        var response = await httpClient.GetAsync("/health", cancellationToken);
+
+        // Assert
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task WebAliveEndpoint_ReturnsHealthy()
+    {
+        // Arrange
+        var cancellationTokenSource = new CancellationTokenSource(DefaultTimeout);
+        var cancellationToken = cancellationTokenSource.Token;
+
+        var appHost = await DistributedApplicationTestingBuilder.CreateAsync<Projects.PowerSharp_Aspire_AppHost>(cancellationToken);
+        appHost.Services.ConfigureHttpClientDefaults(clientBuilder =>
+        {
+            clientBuilder.AddStandardResilienceHandler();
+        });
+
+        await using var app = await appHost.BuildAsync(cancellationToken).WaitAsync(DefaultTimeout, cancellationToken);
+        await app.StartAsync(cancellationToken).WaitAsync(DefaultTimeout, cancellationToken);
+
+        // Act
+        var httpClient = app.CreateHttpClient("webfrontend");
+        await app.ResourceNotifications.WaitForResourceHealthyAsync("webfrontend", cancellationToken).WaitAsync(DefaultTimeout, cancellationToken);
+        var response = await httpClient.GetAsync("/alive", cancellationToken);
+
+        // Assert
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task WebResource_HasExpectedContentType()
+    {
+        // Arrange
+        var cancellationTokenSource = new CancellationTokenSource(DefaultTimeout);
+        var cancellationToken = cancellationTokenSource.Token;
+
+        var appHost = await DistributedApplicationTestingBuilder.CreateAsync<Projects.PowerSharp_Aspire_AppHost>(cancellationToken);
+        appHost.Services.ConfigureHttpClientDefaults(clientBuilder =>
+        {
+            clientBuilder.AddStandardResilienceHandler();
+        });
+
+        await using var app = await appHost.BuildAsync(cancellationToken).WaitAsync(DefaultTimeout, cancellationToken);
+        await app.StartAsync(cancellationToken).WaitAsync(DefaultTimeout, cancellationToken);
+
+        // Act
+        var httpClient = app.CreateHttpClient("webfrontend");
+        await app.ResourceNotifications.WaitForResourceHealthyAsync("webfrontend", cancellationToken).WaitAsync(DefaultTimeout, cancellationToken);
+        var response = await httpClient.GetAsync("/", cancellationToken);
+
+        // Assert
+        Assert.NotNull(response.Content.Headers.ContentType);
+        Assert.Contains("text/html", response.Content.Headers.ContentType.ToString());
+    }
 }

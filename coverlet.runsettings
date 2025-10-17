@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat code coverage">
+        <Configuration>
+          <Format>opencover,cobertura,json</Format>
+          <Exclude>[*Tests]*,[*Tests.*]*</Exclude>
+          <ExcludeByAttribute>Obsolete,GeneratedCodeAttribute,CompilerGeneratedAttribute,ExcludeFromCodeCoverageAttribute</ExcludeByAttribute>
+          <ExcludeByFile>**/obj/**,**/bin/**,**/*.Designer.cs,**/Migrations/**</ExcludeByFile>
+          <IncludeDirectory>../</IncludeDirectory>
+          <SingleHit>false</SingleHit>
+          <UseSourceLink>true</UseSourceLink>
+          <IncludeTestAssembly>false</IncludeTestAssembly>
+          <SkipAutoProps>true</SkipAutoProps>
+          <DeterministicReport>true</DeterministicReport>
+          <ExcludeAssembliesWithoutSources>MissingAll,MissingAny,None</ExcludeAssembliesWithoutSources>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+  
+  <RunConfiguration>
+    <MaxCpuCount>0</MaxCpuCount>
+    <ResultsDirectory>./TestResults</ResultsDirectory>
+    <TargetFramework>net9.0</TargetFramework>
+    <TreatNoTestsAsError>false</TreatNoTestsAsError>
+  </RunConfiguration>
+  
+  <!-- Code Coverage Thresholds -->
+  <!-- These thresholds are aspirational goals for the project -->
+  <!-- Current baseline: Unknown (first coverage run needed) -->
+  <!-- Target thresholds: -->
+  <!--   - Line Coverage: 80% -->
+  <!--   - Branch Coverage: 70% -->
+  <!--   - Method Coverage: 75% -->
+  
+  <!-- Note: coverlet doesn't enforce thresholds in runsettings -->
+  <!-- Use: dotnet test --collect:"XPlat Code Coverage" /p:Threshold=80 /p:ThresholdType=line -->
+  <!-- Or use ReportGenerator for threshold enforcement in CI/CD -->
+</RunSettings>

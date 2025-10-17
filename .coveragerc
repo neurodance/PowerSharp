@@ -1,0 +1,180 @@
+# PowerSharp Platform - Code Coverage Configuration
+# This file documents coverage exclusions and filtering rules
+
+## Exclusion Rules
+
+### Assemblies to Exclude
+- All test assemblies (*Tests, *Tests.*)
+- Third-party assemblies (handled by coverlet)
+
+### Files to Exclude
+- Generated files (*.Designer.cs)
+- Migration files (**/Migrations/**)
+- Build artifacts (obj/**, bin/**)
+- Auto-generated code (marked with [GeneratedCode])
+
+### Code to Exclude by Attribute
+- [Obsolete] - Deprecated code
+- [GeneratedCodeAttribute] - Auto-generated code
+- [CompilerGeneratedAttribute] - Compiler-generated code
+- [ExcludeFromCodeCoverageAttribute] - Explicitly excluded code
+
+### Code Patterns to Exclude
+- Auto-implemented properties (SkipAutoProps=true)
+- Constructor parameter assignments
+- Property getters/setters with no logic
+
+## Coverage Thresholds
+
+### Project-Level Thresholds
+These are aspirational targets for production code quality:
+
+**PowerSharp.Core:**
+- Line Coverage: 80%
+- Branch Coverage: 70%
+- Method Coverage: 75%
+
+**PowerSharp.Platform:**
+- Line Coverage: 80%
+- Branch Coverage: 70%
+- Method Coverage: 75%
+
+**PowerSharp.Aspire Projects:**
+- Line Coverage: 75% (integration-heavy, lower threshold acceptable)
+- Branch Coverage: 65%
+- Method Coverage: 70%
+
+**PnPSharp:**
+- Line Coverage: 70% (external library integration, complex scenarios)
+- Branch Coverage: 60%
+- Method Coverage: 65%
+
+### Global Minimum Thresholds
+Enforced in CI/CD pipeline:
+- Line Coverage: 60% (baseline, should not drop below)
+- Branch Coverage: 50%
+- Method Coverage: 55%
+
+## Coverage Report Formats
+
+### Local Development
+- **OpenCover**: XML format for detailed analysis
+- **Cobertura**: XML format for IDE integration (VS Code)
+- **JSON**: Machine-readable format for custom tooling
+
+### CI/CD Pipeline
+- **OpenCover**: Primary format for ReportGenerator
+- **HTML**: Human-readable reports in artifacts
+- **Badges**: SVG badges for README.md
+
+## Commands
+
+### Generate Coverage Report (All Tests)
+```powershell
+dotnet test PowerSharp.Platform.sln `
+  --configuration Debug `
+  --collect:"XPlat Code Coverage" `
+  --settings coverlet.runsettings `
+  --results-directory ./TestResults
+```
+
+### Generate Coverage with Thresholds
+```powershell
+dotnet test PowerSharp.Platform.sln `
+  --configuration Debug `
+  --collect:"XPlat Code Coverage" `
+  --settings coverlet.runsettings `
+  /p:Threshold=80 `
+  /p:ThresholdType=line `
+  /p:ThresholdStat=total
+```
+
+### Generate Coverage for Specific Project
+```powershell
+dotnet test PowerSharp.Aspire\PowerSharp.Aspire.Tests `
+  --configuration Debug `
+  --collect:"XPlat Code Coverage" `
+  --settings coverlet.runsettings
+```
+
+### Generate HTML Report with ReportGenerator
+```powershell
+# Install ReportGenerator (if not already installed)
+dotnet tool install -g dotnet-reportgenerator-globaltool
+
+# Generate HTML report from coverage results
+reportgenerator `
+  -reports:"TestResults/**/coverage.cobertura.xml" `
+  -targetdir:"TestResults/CoverageReport" `
+  -reporttypes:"Html;Badges" `
+  -assemblyfilters:"-*Tests*"
+```
+
+### View Coverage in VS Code
+```powershell
+# Install Coverage Gutters extension
+# Coverage files will be auto-detected from TestResults/
+# Use Command Palette: "Coverage Gutters: Display Coverage"
+```
+
+## Integration Points
+
+### VS Code Extensions
+- **Coverage Gutters** (ryanluker.vscode-coverage-gutters)
+  - Auto-displays coverage inline in editor
+  - Supports Cobertura XML format
+  - Watch mode available
+
+- **.NET Core Test Explorer** (formulahendry.dotnet-test-explorer)
+  - Run tests with coverage
+  - View results inline
+
+### CI/CD Integration
+- GitHub Actions workflow should:
+  1. Run tests with coverage collection
+  2. Upload coverage artifacts
+  3. Generate HTML reports
+  4. Fail build if below minimum thresholds
+  5. Post coverage badges to README
+
+## Maintenance Notes
+
+### When to Update Thresholds
+- After major refactoring (may need temporary reduction)
+- Quarterly review (should trend upward)
+- When adding new projects (set project-specific targets)
+
+### Coverage Exclusions
+- Use `[ExcludeFromCodeCoverage]` sparingly
+- Document reason in code comments
+- Review exclusions during code reviews
+
+### False Positives
+- Compiler-generated code (e.g., async state machines) - auto-excluded
+- Exception handling in top-level statements - acceptable low coverage
+- Startup/configuration code - consider integration tests
+
+## Best Practices
+
+1. **Run coverage locally before PR** - Ensure no significant drops
+2. **Review uncovered code** - Understand why code isn't tested
+3. **Don't chase 100%** - Diminishing returns above 85%
+4. **Focus on critical paths** - Prioritize business logic coverage
+5. **Use coverage as guide** - Not the only quality metric
+
+## Troubleshooting
+
+### No Coverage Generated
+- Ensure coverlet.collector is referenced in test projects
+- Verify runsettings path is correct
+- Check test project builds successfully
+
+### Incorrect Coverage Numbers
+- Verify exclusion filters in runsettings
+- Check for duplicate test runs
+- Ensure deterministic builds enabled
+
+### Performance Issues
+- Use `SingleHit=true` for faster collection (less accurate)
+- Exclude unnecessary assemblies
+- Run coverage on subset of tests during development

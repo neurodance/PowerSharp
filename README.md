@@ -4,6 +4,8 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![VS2022](https://img.shields.io/badge/Visual%20Studio-2022-5C2D91)](https://visualstudio.microsoft.com/)
 [![VS Code](https://img.shields.io/badge/VS%20Code-Compatible-007ACC)](https://code.visualstudio.com/)
+[![Code Coverage](https://img.shields.io/badge/coverage-run%20tests-blue)](TestResults/CoverageReport/index.html)
+[![Tests](https://img.shields.io/badge/tests-xUnit-green)](https://xunit.net/)
 
 **PowerSharp Platform** is a comprehensive suite of tools for supporting an integrated approach to development with **C#**, **PowerShell 7+**, **TypeScript**, **M365**, the **MS Power Platform**, and **Azure**. It aims to simplify the journey between low-code, pro-code, and vibe-coding to speed up time-to-deployment using established Microsoft technologies.
 
@@ -202,21 +204,77 @@ dotnet test PnPSharp/tests/PnPSharp.IntegrationTests -c Debug
 
 ## 🧪 Testing
 
+### Test Framework
+
+PowerSharp Platform uses **xUnit** for all test projects with comprehensive code coverage tracking:
+
+- **Test Framework**: xUnit 2.9.2
+- **Code Coverage**: coverlet.collector 6.0.2
+- **Test Quality**: xUnit.analyzers 1.16.0
+- **Distributed App Testing**: Aspire.Hosting.Testing 9.5.1
+
 ### Run All Tests
 
 ```powershell
 # Run all tests in the solution
 dotnet test PowerSharp.Platform.sln -c Debug
 
-# With code coverage
-dotnet test PowerSharp.Platform.sln -c Debug --collect:"XPlat Code Coverage"
+# Run tests with code coverage
+.\RUN-COVERAGE.ps1
+
+# Run tests with HTML coverage report
+.\RUN-COVERAGE.ps1 -GenerateReport -Open
+
+# Run tests with coverage threshold enforcement
+.\RUN-COVERAGE.ps1 -Threshold 80 -ThresholdType line
+```
+
+### Run Specific Test Projects
+
+```powershell
+# Run Aspire integration tests
+dotnet test PowerSharp.Aspire\PowerSharp.Aspire.Tests -c Debug
+
+# Run PnPSharp unit tests
+dotnet test PnPSharp/tests/PnPSharp.Tests -c Debug
+
+# Run PnPSharp integration tests (requires live credentials)
+dotnet test PnPSharp/tests/PnPSharp.IntegrationTests -c Debug
 ```
 
 ### Test Projects
 
-- **PnPSharp.Tests** – Unit tests with mocking
-- **PnPSharp.IntegrationTests** – Live SharePoint/Graph tests (opt-in)
-- **PowerSharp.Aspire.Tests** – Aspire integration tests
+- **PowerSharp.Aspire.Tests** (17 tests) – Aspire distributed app integration tests
+  - WebTests: 4 tests (web frontend, health checks)
+  - ApiServiceTests: 5 tests (weather API validation)
+  - AppHostTests: 3 tests (orchestration, resources)
+  - WeatherApiClientTests: 5 tests (client behavior, temperature conversion)
+  
+- **PnPSharp.Tests** – Unit tests with mocking for PnP SDK wrappers
+
+- **PnPSharp.IntegrationTests** – Live SharePoint/Graph tests (opt-in, requires credentials)
+
+### Code Coverage
+
+Code coverage is configured with aspirational thresholds:
+
+- **Global Minimum**: 60% line coverage (enforced in CI/CD)
+- **Target Thresholds**: 
+  - Line Coverage: 80%
+  - Branch Coverage: 70%
+  - Method Coverage: 75%
+
+**Coverage Configuration Files:**
+- `coverlet.runsettings` – Coverage collection settings
+- `.coveragerc` – Documentation and best practices
+- `RUN-COVERAGE.ps1` – Automated coverage runner script
+- `Directory.Build.props` – SourceLink and deterministic builds
+
+**View Coverage in VS Code:**
+1. Install **Coverage Gutters** extension (`ryanluker.vscode-coverage-gutters`)
+2. Run tests with coverage: `.\RUN-COVERAGE.ps1`
+3. Open any source file
+4. Click "Watch" in status bar to enable coverage display
 
 ---
 
