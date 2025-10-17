@@ -26,7 +26,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PowerSharp.Aspire.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+687885c07d5c0c2b022d763de834a22a4dea887d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ca0ae226de8fecd083ae4d21c4d8789984798bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("PowerSharp.Aspire.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PowerSharp.Aspire.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
