@@ -1,0 +1,11 @@
+C:\Users\JordanHughes\source\repos\PowerSharp.Platform\PowerSharp.Platform\bin\Debug\net9.0\PowerSharp.Platform.deps.json
+C:\Users\JordanHughes\source\repos\PowerSharp.Platform\PowerSharp.Platform\bin\Debug\net9.0\PowerSharp.Platform.dll
+C:\Users\JordanHughes\source\repos\PowerSharp.Platform\PowerSharp.Platform\bin\Debug\net9.0\PowerSharp.Platform.pdb
+C:\Users\JordanHughes\source\repos\PowerSharp.Platform\PowerSharp.Platform\obj\Debug\net9.0\PowerSharp.Platform.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JordanHughes\source\repos\PowerSharp.Platform\PowerSharp.Platform\obj\Debug\net9.0\PowerSharp.Platform.AssemblyInfoInputs.cache
+C:\Users\JordanHughes\source\repos\PowerSharp.Platform\PowerSharp.Platform\obj\Debug\net9.0\PowerSharp.Platform.AssemblyInfo.cs
+C:\Users\JordanHughes\source\repos\PowerSharp.Platform\PowerSharp.Platform\obj\Debug\net9.0\PowerSharp.Platform.csproj.CoreCompileInputs.cache
+C:\Users\JordanHughes\source\repos\PowerSharp.Platform\PowerSharp.Platform\obj\Debug\net9.0\PowerSharp.Platform.dll
+C:\Users\JordanHughes\source\repos\PowerSharp.Platform\PowerSharp.Platform\obj\Debug\net9.0\refint\PowerSharp.Platform.dll
+C:\Users\JordanHughes\source\repos\PowerSharp.Platform\PowerSharp.Platform\obj\Debug\net9.0\PowerSharp.Platform.pdb
+C:\Users\JordanHughes\source\repos\PowerSharp.Platform\PowerSharp.Platform\obj\Debug\net9.0\ref\PowerSharp.Platform.dll
