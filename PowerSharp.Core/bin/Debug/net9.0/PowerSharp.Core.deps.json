@@ -8,8 +8,13 @@
     ".NETCoreApp,Version=v9.0": {
       "PowerSharp.Core/1.0.0-preview.1": {
         "dependencies": {
-          "PowerSharp.Core": "1.0.0-preview.1",
-          "Spectre.Console": "0.52.1-preview.0.5",
+          "AdaptiveCards": "3.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.0-rc.2.25502.107",
+          "Microsoft.Extensions.Logging.Console": "10.0.0-rc.2.25502.107",
+          "Microsoft.Extensions.Options": "10.0.0-rc.2.25502.107",
+          "OpenTelemetry": "1.13.1",
+          "OpenTelemetry.Api": "1.13.1",
+          "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.13.1",
           "System.CommandLine": "2.0.0-rc.2.25502.107"
         },
         "runtime": {
@@ -18,7 +23,6 @@
       },
       "AdaptiveCards/3.1.0": {
         "dependencies": {
-          "Microsoft.CSharp": "4.7.0",
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
@@ -28,7 +32,6 @@
           }
         }
       },
-      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Extensions.Configuration/10.0.0-rc.2.25502.107": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "10.0.0-rc.2.25502.107",
@@ -244,14 +247,6 @@
           }
         }
       },
-      "Spectre.Console/0.52.1-preview.0.5": {
-        "runtime": {
-          "lib/net9.0/Spectre.Console.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.52.1.0"
-          }
-        }
-      },
       "System.CommandLine/2.0.0-rc.2.25502.107": {
         "runtime": {
           "lib/net8.0/System.CommandLine.dll": {
@@ -365,13 +360,6 @@
       "sha512": "sha512-b+sPwH0oyAflpgxCyNPMzH92xrQjWl6GuuEBv86/VhO6iHhiWv+PtwzqMS70nOXZQRzpl9YVHXAvn+dKot5IBQ==",
       "path": "adaptivecards/3.1.0",
       "hashPath": "adaptivecards.3.1.0.nupkg.sha512"
-    },
-    "Microsoft.CSharp/4.7.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
-      "path": "microsoft.csharp/4.7.0",
-      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/10.0.0-rc.2.25502.107": {
       "type": "package",
@@ -498,13 +486,6 @@
       "sha512": "sha512-WFqOpqMkjd8lM/asQRgfLP72UCqThQIGoylDgoYR8x0Bh9UCrdmBJCDU4pVZgI9CtSq1sWXeQuUsRXAl5U4yKg==",
       "path": "opentelemetry.exporter.opentelemetryprotocol/1.13.1",
       "hashPath": "opentelemetry.exporter.opentelemetryprotocol.1.13.1.nupkg.sha512"
-    },
-    "Spectre.Console/0.52.1-preview.0.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-N4I33Huqz/73eJXzAlmMrIpa07v5CFQKfNr6BuIg8TR6dwvGxLD4DnYHFraUIE0Rfus4/GnNbC1hlM7VFVGOGQ==",
-      "path": "spectre.console/0.52.1-preview.0.5",
-      "hashPath": "spectre.console.0.52.1-preview.0.5.nupkg.sha512"
     },
     "System.CommandLine/2.0.0-rc.2.25502.107": {
       "type": "package",

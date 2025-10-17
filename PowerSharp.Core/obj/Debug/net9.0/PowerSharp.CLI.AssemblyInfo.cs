@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Command-line tools for PowerSharp. Includes bash↔PowerShell conversion, PATH mana" +
     "gement, environment variable helpers, and more.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0-preview.1+ac1174bfe95d16410f42eb8494096286be14f56c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0-preview.1+6a3d672af2a944b8908271b2de403e90149df2f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("PowerSharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PowerSharp.CLI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

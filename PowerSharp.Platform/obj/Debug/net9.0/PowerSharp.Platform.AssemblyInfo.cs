@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PowerSharp.Platform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac1174bfe95d16410f42eb8494096286be14f56c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a3d672af2a944b8908271b2de403e90149df2f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("PowerSharp.Platform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PowerSharp.Platform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

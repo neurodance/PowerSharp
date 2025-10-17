@@ -73,3 +73,4 @@ C:\_source\repos\PowerSharp\PowerSharp.Aspire\PowerSharp.Aspire.ApiService\obj\D
 C:\_source\repos\PowerSharp\PowerSharp.Aspire\PowerSharp.Aspire.ApiService\obj\Debug\net9.0\PowerSharp.Aspire.ApiService.genruntimeconfig.cache
 C:\_source\repos\PowerSharp\PowerSharp.Aspire\PowerSharp.Aspire.ApiService\obj\Debug\net9.0\ref\PowerSharp.Aspire.ApiService.dll
 C:\_source\repos\PowerSharp\PowerSharp.Aspire\PowerSharp.Aspire.ApiService\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\_source\repos\PowerSharp\PowerSharp.Aspire\PowerSharp.Aspire.ApiService\obj\Debug\net9.0\swae.build.ex.cache

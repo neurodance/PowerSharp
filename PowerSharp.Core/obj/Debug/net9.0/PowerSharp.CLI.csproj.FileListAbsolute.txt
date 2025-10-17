@@ -54,4 +54,3 @@ C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\refint\PowerSharp.C
 C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\PowerSharp.CLI.pdb
 C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\PowerSharp.CLI.genruntimeconfig.cache
 C:\_source\repos\PowerSharp\PowerSharp.Core\obj\Debug\net9.0\ref\PowerSharp.CLI.dll
-C:\_source\repos\PowerSharp\PowerSharp.Core\bin\Debug\net9.0\Spectre.Console.dll

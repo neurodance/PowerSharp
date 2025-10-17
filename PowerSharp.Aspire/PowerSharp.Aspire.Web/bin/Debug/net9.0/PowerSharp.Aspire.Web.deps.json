@@ -22,7 +22,6 @@
           "Microsoft.Extensions.Configuration.Binder": "9.0.10",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.10",
           "Microsoft.Extensions.DependencyInjection.AutoActivation": "9.10.0",
-          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.20",
           "Microsoft.Extensions.Hosting.Abstractions": "9.0.10",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.10",
           "Microsoft.Extensions.Options": "9.0.10",
@@ -46,7 +45,6 @@
           "Microsoft.Extensions.Configuration.Binder": "9.0.10",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.10",
           "Microsoft.Extensions.DependencyInjection.AutoActivation": "9.10.0",
-          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.20",
           "Microsoft.Extensions.Hosting.Abstractions": "9.0.10",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.10",
           "Microsoft.Extensions.Options": "9.0.10",
@@ -63,7 +61,6 @@
       },
       "AspNetCore.HealthChecks.Redis/9.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.20",
           "StackExchange.Redis": "2.9.11"
         },
         "runtime": {
@@ -211,16 +208,6 @@
           }
         }
       },
-      "Microsoft.Extensions.Diagnostics.HealthChecks/8.0.20": {
-        "dependencies": {
-          "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions": "8.0.20",
-          "Microsoft.Extensions.Hosting.Abstractions": "9.0.10",
-          "Microsoft.Extensions.Logging.Abstractions": "9.0.10",
-          "Microsoft.Extensions.Options": "9.0.10"
-        }
-      },
-      "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions/8.0.20": {},
-      "Microsoft.Extensions.Features/8.0.20": {},
       "Microsoft.Extensions.FileProviders.Abstractions/9.0.10": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "9.0.10"
@@ -394,7 +381,6 @@
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.10",
           "Microsoft.Extensions.Configuration.Binder": "9.0.10",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.10",
-          "Microsoft.Extensions.Features": "8.0.20",
           "Microsoft.Extensions.Http": "9.0.10",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.10",
           "Microsoft.Extensions.Options": "9.0.10",
@@ -413,7 +399,6 @@
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.10",
           "Microsoft.Extensions.Configuration.Binder": "9.0.10",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.10",
-          "Microsoft.Extensions.Features": "8.0.20",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.10",
           "Microsoft.Extensions.Options": "9.0.10",
           "Microsoft.Extensions.Primitives": "9.0.10"
@@ -468,9 +453,6 @@
         }
       },
       "OpenTelemetry.Api/1.13.1": {
-        "dependencies": {
-          "System.Diagnostics.DiagnosticSource": "9.0.0"
-        },
         "runtime": {
           "lib/net9.0/OpenTelemetry.Api.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -549,9 +531,6 @@
         }
       },
       "Pipelines.Sockets.Unofficial/2.2.8": {
-        "dependencies": {
-          "System.IO.Pipelines": "5.0.1"
-        },
         "runtime": {
           "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -582,8 +561,7 @@
       },
       "Polly.RateLimiting/8.4.2": {
         "dependencies": {
-          "Polly.Core": "8.4.2",
-          "System.Threading.RateLimiting": "8.0.0"
+          "Polly.Core": "8.4.2"
         },
         "runtime": {
           "lib/net8.0/Polly.RateLimiting.dll": {
@@ -604,9 +582,6 @@
           }
         }
       },
-      "System.Diagnostics.DiagnosticSource/9.0.0": {},
-      "System.IO.Pipelines/5.0.1": {},
-      "System.Threading.RateLimiting/8.0.0": {},
       "PowerSharp.Aspire.ServiceDefaults/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Http.Resilience": "9.10.0",
@@ -736,27 +711,6 @@
       "sha512": "sha512-SRJgt408OA/+v2o47Kjx8Wf+rbCJMmTsbsnkuzVzeP9xfcn4dIoMJXLCKiRlDNzJ3pXLYrXmkyOSY81BehoVHw==",
       "path": "microsoft.extensions.diagnostics.exceptionsummarization/9.10.0",
       "hashPath": "microsoft.extensions.diagnostics.exceptionsummarization.9.10.0.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Diagnostics.HealthChecks/8.0.20": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-UAgqpgfLaFQewIQrMW8hpe/cVdVDRhdoQmI2kWP1tw1iesCZ+qhvYTV4upNRKCI+TQkctlxPlSFVbfk4XKykDw==",
-      "path": "microsoft.extensions.diagnostics.healthchecks/8.0.20",
-      "hashPath": "microsoft.extensions.diagnostics.healthchecks.8.0.20.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions/8.0.20": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ez084scWlXgAl8ccTFw7BSi/KbZ6qvuWXy1K7Dnu0akFhocHct7M/zPIGt64pJXk5GxaMCCtRwuAaI1xfiJcAA==",
-      "path": "microsoft.extensions.diagnostics.healthchecks.abstractions/8.0.20",
-      "hashPath": "microsoft.extensions.diagnostics.healthchecks.abstractions.8.0.20.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Features/8.0.20": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3YCswjRwDom5KEyCfdPfyfKxKOVXairlyjNLJ48BG1YIs6GP2RNbK36rZY7myOkW64kjAaZTXMY7ruscqasDew==",
-      "path": "microsoft.extensions.features/8.0.20",
-      "hashPath": "microsoft.extensions.features.8.0.20.nupkg.sha512"
     },
     "Microsoft.Extensions.FileProviders.Abstractions/9.0.10": {
       "type": "package",
@@ -967,27 +921,6 @@
       "sha512": "sha512-3J0qv0qFhMeCe2ZApnbbC6ZgNs/iTdmqvFyN/tIw5A0CTlABF1BJh86D3Cf03V9FoftvqeKeAnOkJAHTHpm1xA==",
       "path": "stackexchange.redis/2.9.11",
       "hashPath": "stackexchange.redis.2.9.11.nupkg.sha512"
-    },
-    "System.Diagnostics.DiagnosticSource/9.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ddppcFpnbohLWdYKr/ZeLZHmmI+DXFgZ3Snq+/E7SwcdW4UnvxmaugkwGywvGVWkHPGCSZjCP+MLzu23AL5SDw==",
-      "path": "system.diagnostics.diagnosticsource/9.0.0",
-      "hashPath": "system.diagnostics.diagnosticsource.9.0.0.nupkg.sha512"
-    },
-    "System.IO.Pipelines/5.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-qEePWsaq9LoEEIqhbGe6D5J8c9IqQOUuTzzV6wn1POlfdLkJliZY3OlB0j0f17uMWlqZYjH7txj+2YbyrIA8Yg==",
-      "path": "system.io.pipelines/5.0.1",
-      "hashPath": "system.io.pipelines.5.0.1.nupkg.sha512"
-    },
-    "System.Threading.RateLimiting/8.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7mu9v0QDv66ar3DpGSZHg9NuNcxDaaAcnMULuZlaTpP9+hwXhrxNGsF5GmLkSHxFdb5bBc1TzeujsRgTrPWi+Q==",
-      "path": "system.threading.ratelimiting/8.0.0",
-      "hashPath": "system.threading.ratelimiting.8.0.0.nupkg.sha512"
     },
     "PowerSharp.Aspire.ServiceDefaults/1.0.0": {
       "type": "project",
