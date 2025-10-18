@@ -18,6 +18,14 @@
     - Node.js 18+ and npm installed
     - Git configured with GitHub access
     - PowerSharp.Platform.sln exists in current directory
+    
+    NPM Authentication (if required):
+    - For public packages: No authentication needed
+    - For private packages: Run 'npm login' before executing this script
+    - For CI/CD: Set NPM_TOKEN environment variable with a granular access token
+      See: https://docs.npmjs.com/creating-and-viewing-access-tokens
+    - Note: npm recently deprecated classic tokens in favor of granular tokens
+      See: https://github.blog/changelog/2025-09-29-strengthening-npm-security-important-changes-to-authentication-and-token-management/
 #>
 
 [CmdletBinding()]
@@ -85,6 +93,17 @@ if ($LASTEXITCODE -ne 0) {
     exit 1
 }
 Write-Success "npm version: $npmVersion"
+
+# Check npm authentication status (optional - only needed for private packages)
+Write-Step "Checking npm authentication..."
+$npmWhoami = npm whoami 2>$null
+if ($LASTEXITCODE -eq 0) {
+    Write-Success "npm authenticated as: $npmWhoami"
+} else {
+    Write-Warning "npm not authenticated (this is OK for public packages)"
+    Write-Host "  If you encounter authentication errors during build, run 'npm login' first" -ForegroundColor Gray
+    Write-Host "  Or set NPM_TOKEN environment variable for automation" -ForegroundColor Gray
+}
 
 # Check solution file
 if (-not (Test-Path $SolutionPath)) {
@@ -169,9 +188,21 @@ if (-not $SkipBuild) {
     
     try {
         Write-Step "Installing npm dependencies..."
-        npm install
+        
+        # Check if npm authentication is required
+        $npmConfig = npm config get registry 2>$null
+        Write-Host "Using npm registry: $npmConfig" -ForegroundColor Gray
+        
+        # Set npm to non-interactive mode to avoid auth prompts
+        $env:NPM_CONFIG_UPDATE_NOTIFIER = "false"
+        $env:NPM_CONFIG_FUND = "false"
+        
+        # Install with --no-audit and --legacy-peer-deps to avoid auth issues with public packages
+        npm install --no-audit --legacy-peer-deps
         if ($LASTEXITCODE -ne 0) {
             Write-Error "npm install failed"
+            Write-Host "If authentication is required, please run 'npm login' first or set up an npm token." -ForegroundColor Yellow
+            Write-Host "See: https://docs.npmjs.com/creating-and-viewing-access-tokens" -ForegroundColor Yellow
             exit 1
         }
         Write-Success "npm dependencies installed"

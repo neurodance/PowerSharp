@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+po66fzwz3Y=",
+  "dgSpecHash": "Lfptqo3pHYc=",
   "success": true,
   "projectFilePath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.AppHost\\PowerSharp.Aspire.AppHost.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "C:\\Users\\JordanHughes\\.nuget\\packages\\kubernetesclient\\17.0.14\\kubernetesclient.17.0.14.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\messagepack\\2.5.192\\messagepack.2.5.192.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\messagepack.annotations\\2.5.192\\messagepack.annotations.2.5.192.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.build.tasks.git\\8.0.0\\microsoft.build.tasks.git.8.0.0.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.9\\microsoft.extensions.configuration.9.0.9.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.9\\microsoft.extensions.configuration.abstractions.9.0.9.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.configuration.binder\\9.0.9\\microsoft.extensions.configuration.binder.9.0.9.nupkg.sha512",
@@ -59,6 +60,8 @@
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\9.0.9\\microsoft.extensions.options.configurationextensions.9.0.9.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.9\\microsoft.extensions.primitives.9.0.9.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.net.stringtools\\17.6.3\\microsoft.net.stringtools.17.6.3.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.sourcelink.common\\8.0.0\\microsoft.sourcelink.common.8.0.0.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.sourcelink.github\\8.0.0\\microsoft.sourcelink.github.8.0.0.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.visualstudio.threading.only\\17.13.61\\microsoft.visualstudio.threading.only.17.13.61.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.visualstudio.validation\\17.8.8\\microsoft.visualstudio.validation.17.8.8.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\nerdbank.streams\\2.12.87\\nerdbank.streams.2.12.87.nupkg.sha512",

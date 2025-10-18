@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "b5rX4lKiV6w=",
+  "dgSpecHash": "v5k76R23r/4=",
   "success": true,
   "projectFilePath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ApiService\\PowerSharp.Aspire.ApiService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.build.tasks.git\\8.0.0\\microsoft.build.tasks.git.8.0.0.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.ambientmetadata.application\\9.10.0\\microsoft.extensions.ambientmetadata.application.9.10.0.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.compliance.abstractions\\9.10.0\\microsoft.extensions.compliance.abstractions.9.10.0.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.10\\microsoft.extensions.configuration.9.0.10.nupkg.sha512",
@@ -35,6 +36,8 @@
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.telemetry\\9.10.0\\microsoft.extensions.telemetry.9.10.0.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.telemetry.abstractions\\9.10.0\\microsoft.extensions.telemetry.abstractions.9.10.0.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.sourcelink.common\\8.0.0\\microsoft.sourcelink.common.8.0.0.nupkg.sha512",
+    "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.sourcelink.github\\8.0.0\\microsoft.sourcelink.github.8.0.0.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\opentelemetry\\1.13.1\\opentelemetry.1.13.1.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\opentelemetry.api\\1.13.1\\opentelemetry.api.1.13.1.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\opentelemetry.api.providerbuilderextensions\\1.13.1\\opentelemetry.api.providerbuilderextensions.1.13.1.nupkg.sha512",
