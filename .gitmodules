@@ -1,0 +1,3 @@
+[submodule "external/AdaptiveCards"]
+	path = external/AdaptiveCards
+	url = https://github.com/neurodance/AdaptiveCards.git
