@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\_source\\repos\\PowerSharp\\PowerSharp.Platform\\PowerSharp.Platform.csproj": {}
+    "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Platform\\PowerSharp.Platform.csproj": {}
   },
   "projects": {
-    "C:\\_source\\repos\\PowerSharp\\PowerSharp.Platform\\PowerSharp.Platform.csproj": {
+    "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Platform\\PowerSharp.Platform.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Platform\\PowerSharp.Platform.csproj",
+        "projectUniqueName": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Platform\\PowerSharp.Platform.csproj",
         "projectName": "PowerSharp.Platform",
-        "projectPath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Platform\\PowerSharp.Platform.csproj",
+        "projectPath": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Platform\\PowerSharp.Platform.csproj",
         "packagesPath": "C:\\Users\\JordanHughes\\.nuget\\packages\\",
-        "outputPath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Platform\\obj\\",
+        "outputPath": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Platform\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

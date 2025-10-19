@@ -17,5 +17,5 @@ public class PowerSharp_Aspire_AppHost
     /// <summary>
     /// The path to the Aspire Host project.
     /// </summary>
-    public static string ProjectPath => """C:\_source\repos\PowerSharp\PowerSharp.Aspire\PowerSharp.Aspire.AppHost""";
+    public static string ProjectPath => """C:\_source\repos\AdaptiveSystem\PowerSharp\PowerSharp.Aspire\PowerSharp.Aspire.AppHost""";
 }

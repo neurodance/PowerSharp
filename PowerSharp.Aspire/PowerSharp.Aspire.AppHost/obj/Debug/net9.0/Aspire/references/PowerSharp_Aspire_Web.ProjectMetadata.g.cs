@@ -15,5 +15,5 @@ public class PowerSharp_Aspire_Web : global::Aspire.Hosting.IProjectMetadata
     /// <summary>
     /// The path to the PowerSharp_Aspire_Web project.
     /// </summary>
-    public string ProjectPath => """C:\_source\repos\PowerSharp\PowerSharp.Aspire\PowerSharp.Aspire.Web\PowerSharp.Aspire.Web.csproj""";
+    public string ProjectPath => """C:\_source\repos\AdaptiveSystem\PowerSharp\PowerSharp.Aspire\PowerSharp.Aspire.Web\PowerSharp.Aspire.Web.csproj""";
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v5k76R23r/4=",
+  "dgSpecHash": "uuRc1pjGlaM=",
   "success": true,
-  "projectFilePath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ApiService\\PowerSharp.Aspire.ApiService.csproj",
+  "projectFilePath": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ApiService\\PowerSharp.Aspire.ApiService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.build.tasks.git\\8.0.0\\microsoft.build.tasks.git.8.0.0.nupkg.sha512",

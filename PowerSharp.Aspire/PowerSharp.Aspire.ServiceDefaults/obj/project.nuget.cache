@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lL7JfTH28MA=",
+  "dgSpecHash": "O5qjrLz9hW0=",
   "success": true,
-  "projectFilePath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\PowerSharp.Aspire.ServiceDefaults.csproj",
+  "projectFilePath": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\PowerSharp.Aspire.ServiceDefaults.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.build.tasks.git\\8.0.0\\microsoft.build.tasks.git.8.0.0.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.extensions.ambientmetadata.application\\9.10.0\\microsoft.extensions.ambientmetadata.application.9.10.0.nupkg.sha512",

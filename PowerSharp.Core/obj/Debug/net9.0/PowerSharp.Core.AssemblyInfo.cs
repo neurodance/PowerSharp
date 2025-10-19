@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Production observability for Microsoft Agent Framework. Provides middleware for E" +
     "vidence Accumulation, Resource Allocation, and Feedback Loops patterns.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0-preview.1+132706822656f85f75824f440dce650662ef7562")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0-preview.1")]
 [assembly: System.Reflection.AssemblyProductAttribute("PowerSharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PowerSharp.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

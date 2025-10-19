@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ar0CMZ8ywQg=",
+  "dgSpecHash": "j0Vh7Mv0FfI=",
   "success": true,
-  "projectFilePath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.Web\\PowerSharp.Aspire.Web.csproj",
+  "projectFilePath": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.Web\\PowerSharp.Aspire.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JordanHughes\\.nuget\\packages\\aspire.stackexchange.redis\\9.5.1\\aspire.stackexchange.redis.9.5.1.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\aspire.stackexchange.redis.outputcaching\\9.5.1\\aspire.stackexchange.redis.outputcaching.9.5.1.nupkg.sha512",

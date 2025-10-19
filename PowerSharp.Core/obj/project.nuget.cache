@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yVEoVK3mE/Y=",
+  "dgSpecHash": "A8t4cEwyZFw=",
   "success": true,
-  "projectFilePath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Core\\PowerSharp.CLI.csproj",
+  "projectFilePath": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Core\\PowerSharp.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JordanHughes\\.nuget\\packages\\adaptivecards\\3.1.0\\adaptivecards.3.1.0.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\microsoft.build.tasks.git\\8.0.0\\microsoft.build.tasks.git.8.0.0.nupkg.sha512",
@@ -27,7 +27,6 @@
     "C:\\Users\\JordanHughes\\.nuget\\packages\\opentelemetry.api\\1.13.1\\opentelemetry.api.1.13.1.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\opentelemetry.api.providerbuilderextensions\\1.13.1\\opentelemetry.api.providerbuilderextensions.1.13.1.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\opentelemetry.exporter.opentelemetryprotocol\\1.13.1\\opentelemetry.exporter.opentelemetryprotocol.1.13.1.nupkg.sha512",
-    "C:\\Users\\JordanHughes\\.nuget\\packages\\spectre.console\\0.52.1-preview.0.5\\spectre.console.0.52.1-preview.0.5.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\system.commandline\\2.0.0-rc.2.25502.107\\system.commandline.2.0.0-rc.2.25502.107.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\system.diagnostics.diagnosticsource\\10.0.0-rc.2.25502.107\\system.diagnostics.diagnosticsource.10.0.0-rc.2.25502.107.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\system.io.pipelines\\10.0.0-rc.2.25502.107\\system.io.pipelines.10.0.0-rc.2.25502.107.nupkg.sha512",

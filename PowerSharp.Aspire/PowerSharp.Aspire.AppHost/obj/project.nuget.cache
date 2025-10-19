@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Lfptqo3pHYc=",
+  "dgSpecHash": "aqxwRGnhmxc=",
   "success": true,
-  "projectFilePath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.AppHost\\PowerSharp.Aspire.AppHost.csproj",
+  "projectFilePath": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.AppHost\\PowerSharp.Aspire.AppHost.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JordanHughes\\.nuget\\packages\\aspire.dashboard.sdk.win-x64\\9.5.1\\aspire.dashboard.sdk.win-x64.9.5.1.nupkg.sha512",
     "C:\\Users\\JordanHughes\\.nuget\\packages\\aspire.hosting\\9.5.1\\aspire.hosting.9.5.1.nupkg.sha512",

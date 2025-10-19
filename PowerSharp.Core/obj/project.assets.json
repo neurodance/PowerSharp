@@ -409,19 +409,6 @@
           }
         }
       },
-      "Spectre.Console/0.52.1-preview.0.5": {
-        "type": "package",
-        "compile": {
-          "lib/net9.0/Spectre.Console.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/Spectre.Console.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "System.CommandLine/2.0.0-rc.2.25502.107": {
         "type": "package",
         "compile": {
@@ -552,26 +539,6 @@
         },
         "build": {
           "buildTransitive/net8.0/System.Text.Json.targets": {}
-        }
-      },
-      "PowerSharp.Core/1.0.0-preview.1": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "AdaptiveCards": "3.1.0",
-          "Microsoft.Extensions.Logging.Abstractions": "10.0.0-rc.2.25502.107",
-          "Microsoft.Extensions.Logging.Console": "10.0.0-rc.2.25502.107",
-          "Microsoft.Extensions.Options": "10.0.0-rc.2.25502.107",
-          "OpenTelemetry": "1.13.1",
-          "OpenTelemetry.Api": "1.13.1",
-          "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.13.1",
-          "System.CommandLine": "2.0.0-rc.2.25502.107"
-        },
-        "compile": {
-          "bin/placeholder/PowerSharp.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/PowerSharp.Core.dll": {}
         }
       }
     }
@@ -1416,25 +1383,6 @@
         "opentelemetry.exporter.opentelemetryprotocol.nuspec"
       ]
     },
-    "Spectre.Console/0.52.1-preview.0.5": {
-      "sha512": "N4I33Huqz/73eJXzAlmMrIpa07v5CFQKfNr6BuIg8TR6dwvGxLD4DnYHFraUIE0Rfus4/GnNbC1hlM7VFVGOGQ==",
-      "type": "package",
-      "path": "spectre.console/0.52.1-preview.0.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net8.0/Spectre.Console.dll",
-        "lib/net8.0/Spectre.Console.xml",
-        "lib/net9.0/Spectre.Console.dll",
-        "lib/net9.0/Spectre.Console.xml",
-        "lib/netstandard2.0/Spectre.Console.dll",
-        "lib/netstandard2.0/Spectre.Console.xml",
-        "logo.png",
-        "spectre.console.0.52.1-preview.0.5.nupkg.sha512",
-        "spectre.console.nuspec"
-      ]
-    },
     "System.CommandLine/2.0.0-rc.2.25502.107": {
       "sha512": "l2myq5KMDP78bweagWfubIvINvqW22qHTXGxBNH2mMbBBod6v0LNU4/cc8iU3IrFjeCtRtKgW8mw7vy2q482Fw==",
       "type": "package",
@@ -1644,18 +1592,18 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "PowerSharp.Core/1.0.0-preview.1": {
-      "type": "project",
-      "path": "PowerSharp.Core.csproj",
-      "msbuildProject": "PowerSharp.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "AdaptiveCards >= 3.1.0",
+      "Microsoft.Extensions.Logging.Abstractions >= 10.0.0-rc.2.25502.107",
+      "Microsoft.Extensions.Logging.Console >= 10.0.0-rc.2.25502.107",
+      "Microsoft.Extensions.Options >= 10.0.0-rc.2.25502.107",
       "Microsoft.SourceLink.GitHub >= 8.0.0",
-      "PowerSharp.Core >= 1.0.0-preview.1",
-      "Spectre.Console >= 0.52.1-preview.0.5",
+      "OpenTelemetry >= 1.13.1",
+      "OpenTelemetry.Api >= 1.13.1",
+      "OpenTelemetry.Exporter.OpenTelemetryProtocol >= 1.13.1",
       "System.CommandLine >= 2.0.0-rc.2.25502.107"
     ]
   },
@@ -1666,11 +1614,11 @@
   "project": {
     "version": "1.0.0-preview.1",
     "restore": {
-      "projectUniqueName": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Core\\PowerSharp.CLI.csproj",
-      "projectName": "PowerSharp.CLI",
-      "projectPath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Core\\PowerSharp.CLI.csproj",
+      "projectUniqueName": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Core\\PowerSharp.Core.csproj",
+      "projectName": "PowerSharp.Core",
+      "projectPath": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Core\\PowerSharp.Core.csproj",
       "packagesPath": "C:\\Users\\JordanHughes\\.nuget\\packages\\",
-      "outputPath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Core\\obj\\",
+      "outputPath": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1691,11 +1639,7 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {
-            "C:\\_source\\repos\\PowerSharp\\PowerSharp.Core\\PowerSharp.Core.csproj": {
-              "projectPath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Core\\PowerSharp.Core.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -1714,14 +1658,38 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "AdaptiveCards": {
+            "target": "Package",
+            "version": "[3.1.0, )"
+          },
+          "Microsoft.Extensions.Logging.Abstractions": {
+            "target": "Package",
+            "version": "[10.0.0-rc.2.25502.107, )"
+          },
+          "Microsoft.Extensions.Logging.Console": {
+            "target": "Package",
+            "version": "[10.0.0-rc.2.25502.107, )"
+          },
+          "Microsoft.Extensions.Options": {
+            "target": "Package",
+            "version": "[10.0.0-rc.2.25502.107, )"
+          },
           "Microsoft.SourceLink.GitHub": {
             "suppressParent": "All",
             "target": "Package",
             "version": "[8.0.0, )"
           },
-          "Spectre.Console": {
+          "OpenTelemetry": {
             "target": "Package",
-            "version": "[0.52.1-preview.0.5, )"
+            "version": "[1.13.1, )"
+          },
+          "OpenTelemetry.Api": {
+            "target": "Package",
+            "version": "[1.13.1, )"
+          },
+          "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
+            "target": "Package",
+            "version": "[1.13.1, )"
           },
           "System.CommandLine": {
             "target": "Package",

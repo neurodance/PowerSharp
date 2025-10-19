@@ -2181,11 +2181,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\PowerSharp.Aspire.ServiceDefaults.csproj",
+      "projectUniqueName": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\PowerSharp.Aspire.ServiceDefaults.csproj",
       "projectName": "PowerSharp.Aspire.ServiceDefaults",
-      "projectPath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\PowerSharp.Aspire.ServiceDefaults.csproj",
+      "projectPath": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\PowerSharp.Aspire.ServiceDefaults.csproj",
       "packagesPath": "C:\\Users\\JordanHughes\\.nuget\\packages\\",
-      "outputPath": "C:\\_source\\repos\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\obj\\",
+      "outputPath": "C:\\_source\\repos\\AdaptiveSystem\\PowerSharp\\PowerSharp.Aspire\\PowerSharp.Aspire.ServiceDefaults\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

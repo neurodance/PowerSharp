@@ -15,5 +15,5 @@ public class PowerSharp_Aspire_ApiService : global::Aspire.Hosting.IProjectMetad
     /// <summary>
     /// The path to the PowerSharp_Aspire_ApiService project.
     /// </summary>
-    public string ProjectPath => """C:\_source\repos\PowerSharp\PowerSharp.Aspire\PowerSharp.Aspire.ApiService\PowerSharp.Aspire.ApiService.csproj""";
+    public string ProjectPath => """C:\_source\repos\AdaptiveSystem\PowerSharp\PowerSharp.Aspire\PowerSharp.Aspire.ApiService\PowerSharp.Aspire.ApiService.csproj""";
 }
